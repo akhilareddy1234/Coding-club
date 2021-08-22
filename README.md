@@ -49,7 +49,7 @@
 
 ### (a) Java Example
 
-'''java example
+```java example
 
 import java.util.*;
 class Example{
@@ -66,4 +66,4 @@ class Example{
 	}
 }
 
-'''
+```
