@@ -26,3 +26,21 @@
 ![pushed changes](images/question_2c.png)
 
 ## Question 3
+
+## Question 4
+
+### (a)
+
+1. Java
+2. Python
+2. C
+
+### (b)
+
+* Windows
+* Linux
+
+### (c)
+
+* Eclipse
+* Vim
