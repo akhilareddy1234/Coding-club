@@ -67,3 +67,8 @@ class Example{
 }
 
 ```
+
+### (b) 
+
+Eclipse IDE is a software which provides a development environment that is primarily used to run java applications and web based applications.
+[link to Eclipse](https://www.eclipse.org/downloads/packages/release/kepler/sr1/eclipse-ide-java-developers)
