@@ -17,6 +17,8 @@
 
 ## Question 2
 
+### (a)
+
 ### (b)
 
 ![commit changes to repo](images/question_2b.png)
@@ -26,6 +28,10 @@
 ![pushed changes](images/question_2c.png)
 
 ## Question 3
+
+### (a)
+
+### (b)
 
 ## Question 4
 
@@ -71,4 +77,4 @@ class Example{
 ### (b) 
 
 Eclipse IDE is a software which provides a development environment that is primarily used to run java applications and web based applications.
-[link to Eclipse](https://www.eclipse.org/downloads/packages/release/kepler/sr1/eclipse-ide-java-developers)
+[link to Eclipse download](https://www.eclipse.org/downloads/packages/release/kepler/sr1/eclipse-ide-java-developers)
