@@ -170,3 +170,17 @@ myArray2.sort(noCaseSort);
 // (iv) what is the purpose of passing this function here? -> sorts the elements of the array with respect to the function. 
 
 ### (c)
+me = {}; // creates an empty object
+me.name = "Akhila Reddy Bukkasamudram";
+me["favorite desert"] = "vanilla";
+// (i) Why this syntax and not that used for the name field/property - this syntax is used for the purpose of denoting the object as a key-value pair.\
+me.courses = ["CS351", "CS651", "CS601", "CS211"];
+// (ii) can I put an array in an object? - Yes, you can.
+me.major = "Computer Science";
+me.number = 1234; // (iii) your favorite number
+me.codeEditors = ["Eclipse", "IntelliJ"]; // (iv) Put in yours here
+me["nick name"] = "akki";
+console.log(me);
+
+## (5)
+### (a)
