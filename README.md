@@ -36,7 +36,7 @@ We should put header outside the main.
 No. We should not use site-wide footer inside the main element. I prefer using footer as the last element to using as site-wide footer such as copyrights notice.
 
 ### (c)
-![Home Page with Nav Menu and Footer](images/image2_2c.PNG)
+![Home Page with Nav Menu and Footer](images\image2_2c.png)
 ### (d)
 
 ```
