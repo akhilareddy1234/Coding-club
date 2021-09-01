@@ -36,7 +36,7 @@ We should put header outside the main.
 No. We should not use site-wide footer inside the main element. I prefer using footer as the last element to using as site-wide footer such as copyrights notice.
 
 ### (c)
-![Home Page with Nav Menu and Footer](images\image2_2c.png)
+![Home Page with Nav Menu and Footer](images/image2_2c.png)
 ### (d)
 
 ```
@@ -94,7 +94,7 @@ parseInt('hi5'); // NaN -> (iii) Is this the same as (ii) - No, because the inte
 parseFloat('3.145AkhilaReddyBukkasamudram'); // 3.145\
 parseFloat('AkhilaReddyBukkasamudram2112'); // NaN
 
-![String to number conversions](images/image2_3a.PNG)
+![String to number conversions](images/image2_3a.png)
 
 ### (b)
 pi = Math.PI;
