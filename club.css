@@ -1,0 +1,40 @@
+header {
+    font-family: 'Lobster', cursive;
+    text-align: center;
+}
+nav, main {
+    background-color: rgb(192,192,192);
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-right: 20px;
+    margin-left: 15px;
+    padding: 10px;
+}
+nav {
+    max-width: 45%;
+    border-style: inset;
+}
+body {
+    background-color: rgb(176, 146, 204);
+    padding: 10px;
+}
+li {
+    list-style-type: none;
+    width: fit-content;
+}
+a:link {
+    text-decoration: none;
+}
+a:visited {
+    color: rgb(110, 20, 8);
+}
+a:hover {
+    background-color: blue;
+}
+.active {
+    background-color: rgb(222, 236, 15);       
+}
+footer {
+    text-align: center;
+    font-style: oblique;
+}
