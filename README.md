@@ -194,7 +194,7 @@ me.codeEditors = ["Eclipse", "IntelliJ"]; // (iv) Put in yours here
 me["nick name"] = "akki";\
 console.log(me);
 
-![Arrays and basic objects](images/image_4c.png)
+![Arrays and basic objects](images/image2_4c.png)
 
 ## (5)
 ### (a)
@@ -202,7 +202,7 @@ Lobster is the font I am using.
 
 ### (b)
 
-![Box model](images/image_5b.png)
+![Box model](images/image2_5b.png)
 
 ### (c)
 ```
