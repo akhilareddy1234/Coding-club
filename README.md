@@ -105,7 +105,7 @@ mpg.toString(); // Example, gives full "precision"
 // (ii) Use toPrecision to get h (planck's constant) to 3 sig figs - "6.63e-34"\
 // (iii) Use toFixed to get the mpg to a tenth of a gallon - "29.0"
 
-![Numbers to strings](images/image2_3b.PNG)
+![Numbers to strings](images/image2_3b.png)
 
 ### (c)
 a = "AkhilaReddyBukkasamudram"; 
@@ -119,7 +119,7 @@ console.log(test2);
 test3 = 'It\'s a pain to always escape quotes'; // (iii) What is going on here -> It's a pain to always escape quotes. Quotes within a string should be denoted by backslash.\
 console.log(test3);
 
-![Single and double quote strings](images/image2_3c.PNG)
+![Single and double quote strings](images/image2_3c.png)
 
 ### (d)
 name = "Akhila Reddy Bukkasamudram"
@@ -132,11 +132,11 @@ console.log(lname);
 console.log("Your name includes an 'a': " + uname.includes('A'));
 console.log("Your name includes an 'i': " + lname.includes('i'));
 
-![Simple string manipulations](images/image2_3d.PNG)
+![Simple string manipulations](images/image2_3d.png)
 
 ### (e)
 
-![Backticks and template strings](images/image2_3e.PNG)
+![Backticks and template strings](images/image2_3e.png)
 
 ## (4)
 
@@ -155,7 +155,7 @@ console.log(myArray.join(' '));
 myArray.pop(); // (vi) what does this do? - removes the last element from the array.\
 console.log("The number of words is: " + myArray.length);
 
-![Array basics](images/image2_4a.PNG)
+![Array basics](images/image2_4a.png)
 
 ### (b)
 sentence2 = "Whereas recognition of the inherent dignity and of the equal and inalienable rights of all members of the human family is the foundation of freedom, justice and peace in the world";
@@ -194,7 +194,7 @@ me.codeEditors = ["Eclipse", "IntelliJ"]; // (iv) Put in yours here
 me["nick name"] = "akki";\
 console.log(me);
 
-![Arrays and basic objects](images/image_4c.PNG)
+![Arrays and basic objects](images/image_4c.png)
 
 ## (5)
 ### (a)
@@ -202,7 +202,7 @@ Lobster is the font I am using.
 
 ### (b)
 
-![Box model](images/image_5b.PNG)
+![Box model](images/image_5b.png)
 
 ### (c)
 ```
@@ -224,11 +224,11 @@ a:hover {
 }
 ```
 
-![Navigation Styling](images/image2_5c.PNG)
+![Navigation Styling](images/image2_5c.png)
 
 ### (d)
 
-![Footer styling](images/image2_5d.PNG)
+![Footer styling](images/image2_5d.png)
 
 ```
 header {
