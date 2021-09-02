@@ -9,11 +9,11 @@
 
 ### (b)
 
-(i) No. Site wide navigation should not be in the <main> element.
+(i) No. Site wide navigation should not be in the main element.
 
-(ii) No. Common Banners must not be kept in the <main> element.
+(ii) No. Common Banners must not be kept in the main element.
 
-(iii) No. Copyright notices are not kept in the <main> element. It is kept in footer.
+(iii) No. Copyright notices are not kept in the main element. It is kept in footer.
 
 The file names are :
 
@@ -204,24 +204,6 @@ Lobster is the font I am using.
 ![Box model](images/image2_5b.png)
 
 ### (c)
-```
-li {
-    list-style-type: none;
-    width: fit-content;
-}
-a:link {
-    text-decoration: none;
-}
-a:visited {
-    color: violet;
-}
-a:hover {
-    background-color: blue;
-}
-.active {
-    background-color: rgb(222, 236, 15);       
-}
-```
 
 ![Navigation Styling](images/image2_5c.png)
 
