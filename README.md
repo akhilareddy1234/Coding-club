@@ -97,10 +97,10 @@ parseFloat('AkhilaReddyBukkasamudram2112'); // NaN
 ![String to number conversions](images/image2_3a.png)
 
 ### (b)
-pi = Math.PI;
-h = 6.62607004e-34;
-mpg = 343/11.8;
-mpg.toString(); // Example, gives full "precision"
+pi = Math.PI;\
+h = 6.62607004e-34;\
+mpg = 343/11.8;\
+mpg.toString(); // Example, gives full "precision"\
 // (i) Use toFixed to get a string of the first 5 digits of pi - "3.14159"\
 // (ii) Use toPrecision to get h (planck's constant) to 3 sig figs - "6.63e-34"\
 // (iii) Use toFixed to get the mpg to a tenth of a gallon - "29.0"
@@ -108,28 +108,27 @@ mpg.toString(); // Example, gives full "precision"
 ![Numbers to strings](images/image2_3b.png)
 
 ### (c)
-a = "AkhilaReddyBukkasamudram"; 
-b = 'AkhilaReddyBukkasamudram'; 
-console.log(a === b); // Check if these are equal -> true
-// Why bother with two string delimiters? -> a single quoted string can have double quotes within it without having escaping them and a double quoted string can have single quotes without escaping them.
+a = "AkhilaReddyBukkasamudram";  
+b = 'AkhilaReddyBukkasamudram';  
+console.log(a === b); // Check if these are equal -> true\
+// Why bother with two string delimiters? -> a single quoted string can have double quotes within it without having escaping them and a double quoted string can have single quotes without escaping them.\
 test = "It's a pain to always escape quotes"; // (i) does this work -> yes, it works.\
-console.log(test);
+console.log(test);\
 test = 'It's a pain to always escape quotes'; // (ii) why not this? -> It raises syntax error. The test variable is delimited because of a single quote.\
-console.log(test2);
+console.log(test2);\
 test3 = 'It\'s a pain to always escape quotes'; // (iii) What is going on here -> It's a pain to always escape quotes. Quotes within a string should be denoted by backslash.\
 console.log(test3);
 
 ![Single and double quote strings](images/image2_3c.png)
 
 ### (d)
-name = "Akhila Reddy Bukkasamudram"
+name = "Akhila Reddy Bukkasamudram"\
 uname = name.toUpperCase(); // (i) What? -> converts into uppercase\
-console.log(uname);
+console.log(uname);\
 lname = name.toLowerCase(); // (ii) What? -> converts into lowercase\
-console.log(lname);
-// Explain what the following two lines do and show a screenshot
-// of the results. -> The following lines check if the uname has 'A' in it and if the lname has 'i' in it.\
-console.log("Your name includes an 'a': " + uname.includes('A'));
+console.log(lname);\
+// Explain what the following two lines do and show a screenshot of the results. -> The following lines check if the uname has 'A' in it and if the lname has 'i' in it.\
+console.log("Your name includes an 'a': " + uname.includes('A'));\
 console.log("Your name includes an 'i': " + lname.includes('i'));
 
 ![Simple string manipulations](images/image2_3d.png)
@@ -141,29 +140,29 @@ console.log("Your name includes an 'i': " + lname.includes('i'));
 ## (4)
 
 ### (a)
-sentence = "A long, long, time ago in a galaxy"; // A string
+sentence = "A long, long, time ago in a galaxy"; // A string\
 myArray = sentence.split(' '); // (i) what does this do? - splits the sentence string into an array of substrings.\
-console.log("The number of words is: " + myArray.length); 
+console.log("The number of words is: " + myArray.length);  
 myArray.push("far"); // (ii) what do each of these calls do? - inserts the string "far" at the end of the array.\
-myArray.push("far");
-myArray.push("away");
-console.log("The number of words is: " + myArray.length);
+myArray.push("far");\
+myArray.push("away");\
+console.log("The number of words is: " + myArray.length);\
 console.log(myArray.join('_')); // (iii) what does join do? - concatenates all the array elements within myArray with the value in paranthesis.\
 tempIndex = myArray.indexOf('galaxy'); // (iv) What does this do? - returns the index value of the parameter 'galaxy'.\
 myArray[tempIndex] = "college"; // (v) did I change an element? - yes, the element college replaced the array element galaxy.\
-console.log(myArray.join(' '));
+console.log(myArray.join(' '));\
 myArray.pop(); // (vi) what does this do? - removes the last element from the array.\
 console.log("The number of words is: " + myArray.length);
 
 ![Array basics](images/image2_4a.png)
 
 ### (b)
-sentence2 = "Whereas recognition of the inherent dignity and of the equal and inalienable rights of all members of the human family is the foundation of freedom, justice and peace in the world";
+sentence2 = "Whereas recognition of the inherent dignity and of the equal and inalienable rights of all members of the human family is the foundation of freedom, justice and peace in the world";\
 myArray2 = sentence2.split(" ");
 
 function upper(xString) {
   return xString.toUpperCase();
-}
+}\
 // (i) What does this function do? -> converts string to uppercase.
 
 myArray3 = myArray2.map(upper); //(ii) What does map do? -> This function creates a new array with the results of called function on every element in the myArray2.
@@ -175,7 +174,7 @@ function noCaseSort(x, y) {
     return 1;
   }
   return 0;
-}
+}\
 // (iii) why would I do this? -> This function compares 2 elements and sorts them in ascending order.
 
 myArray2.sort(noCaseSort);
@@ -190,7 +189,7 @@ me.courses = ["CS351", "CS651", "CS601", "CS211"];\
 // (ii) can I put an array in an object? - Yes, you can.\
 me.major = "Computer Science";\
 me.number = 1234; // (iii) your favorite number\
-me.codeEditors = ["Eclipse", "IntelliJ"]; // (iv) Put in yours here
+me.codeEditors = ["Eclipse", "IntelliJ"]; // (iv) Put in yours here\
 me["nick name"] = "akki";\
 console.log(me);
 
