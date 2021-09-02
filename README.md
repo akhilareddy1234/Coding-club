@@ -103,7 +103,7 @@ mpg = 343/11.8;\
 mpg.toString(); // Example, gives full "precision"\
 // (i) Use toFixed to get a string of the first 5 digits of pi - "3.14159"\
 // (ii) Use toPrecision to get h (planck's constant) to 3 sig figs - "6.63e-34"\
-// (iii) Use toFixed to get the mpg to a tenth of a gallon - "29.0"
+// (iii) Use toFixed to get the mpg to a tenth of a gallon - "29.1"
 
 ![Numbers to strings](images/image2_3b.png)
 
