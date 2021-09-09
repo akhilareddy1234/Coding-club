@@ -13,8 +13,8 @@ Included images in index.html
 
 Emojis used in my club website
 
-* &#128522
-* &#128071
+* &#128522 &#128522; 
+* &#128071 &#128071;
 
 ![Emoji on webpage](images/image3_1b.png)
 
