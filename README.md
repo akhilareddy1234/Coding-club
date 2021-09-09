@@ -6,9 +6,16 @@
 ## (1)
 
 ### (a)
+Included images in index.html
 ![Image on webpage](images/image3_1a.png)
 
 ### (b)
+
+Emojis used in my club website
+
+* &#128522
+* &#128071
+
 ![Emoji on webpage](images/image3_1b.png)
 
 ## (2)
@@ -49,6 +56,20 @@
 ### (c)
 ![Styled table](images/image3_2c.png)
 
+```
+tbody tr:nth-child(odd) {
+    background-color: rgb(119,136,153);
+  }
+  
+  tbody tr:nth-child(even) {
+    background-color: rgb(192,192,192);
+  }
+  
+  table {
+    background-color: rgb(47,79,79);
+  }
+```
+
 ## (3)
 
 ### (a)
@@ -67,6 +88,7 @@
 states.length
 
 ```
+![State Count](images/image3_4a.png)
 
 ### (b)
 
@@ -79,6 +101,7 @@ function total_US_Population(total_population, current_value){
 states.reduce(total_US_Population,0)
 
 ```
+![Total US Population](images/image3_4b.png)
 
 ### (c)
 
@@ -91,3 +114,4 @@ state_names = states.map(state => state.state)
 console.log(state_names.slice(0,5))
 
 ```
+![Array of 5 most populous](images/image3_4c.png)
