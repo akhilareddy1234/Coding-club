@@ -84,6 +84,8 @@ tbody tr:nth-child(odd) {
 
 ### (a)
 
+ The states array contain object type.
+
 ```
 states.length
 
