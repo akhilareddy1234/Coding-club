@@ -147,7 +147,7 @@ events = [{"name": "Workshop",
     let signupv = document.getElementById("signid")
     signupv.addEventListener('click', signupfunction);
     let section = document.getElementById("ThanksDialog")
-    let secWrap = document.getElementById("ThanksDialogWrapper")
+    
     function signupfunction()
         {
             
@@ -166,7 +166,7 @@ events = [{"name": "Workshop",
             
 
             section.appendChild(p);
-            secWrap.classList.add("show");
+            section.classList.add("show");
             
             
             let closev = document.getElementById("closeid");
@@ -175,7 +175,7 @@ events = [{"name": "Workshop",
 
         function clearfunction()
         {
-            secWrap.classList.remove("show");
+            section.classList.remove("show");
             section.innerHTML = "";
         }
 </script>
