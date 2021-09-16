@@ -38,14 +38,81 @@ footer {
     text-align: center;
     font-style: oblique;
 }
-tbody tr:nth-child(odd) {
+tr:nth-child(odd) {
     background-color: rgb(119,136,153);
   }
   
-  tbody tr:nth-child(even) {
+tr:nth-child(even) {
     background-color: rgb(192,192,192);
+}
+table, th, td {
+    border: solid;
+}
+th {
+    background-color: rgb(47,79,79);
+}
+label {
+    display: block;
+    margin: 1px;
+    padding: 1px;
   }
   
-  table {
-    background-color: rgb(47,79,79);
+  .field {
+    margin: 1px;
+    padding: 1px;
   }
+
+  input {
+      background-color: aquamarine;
+  }
+  
+  input:invalid {
+    background-color: #ffdddd;
+  }
+  
+  form:invalid {
+    border: 4px solid #ffdddd;
+  }
+  
+  input:valid {
+    background-color: #ddffdd;
+  }
+  
+  form:valid {
+    border: 4px solid #ddffdd;
+  }
+  
+  input:required {
+    border-color: #fddddd;
+    border-width: 2px;
+  }
+  
+  input:required:invalid {
+    border-color: #c00000;
+  }
+  .hide{
+    display: none ;
+    
+    }
+.show{
+    display: block !important;
+    }
+
+.wrap{
+    background-color: rgba(255, 0, 0, 0.3);
+    z-index: 1;
+    top: 0;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    display: none;
+}
+
+.wrapcenter{
+        background-color: aqua;
+        margin: auto;
+        position: relative;
+        max-width: 500px;
+        padding: 15px;
+        margin-top: 200px;
+}

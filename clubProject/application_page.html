@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="../club.css" />
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./login.html">Login</a></li>
+            <li><a href="./club_activities.html">Activities</a></li>
+            <li class="active"><a href="./application_page.html">Membership</a></li>
+        </ul>
+    </nav>
+    
+<h2>Apply Now</h2>
+
+<form id="membership">
+  <label for="fname">First name:</label><br>
+  <input type="text" id="fname" name="fname" required><br>
+  <label for="lname">Last name:</label><br>
+  <input type="text" id="lname" name="lname" required><br><br>
+  <label for="mailid">Email id:</label><br>
+  <input type="email" id="mailid" name="mailid" required><br><br>
+  <label for="pswrd">Password</label><br>
+  <input type="password" id="pswrd" name="pswrd" minlength="8" maxlength="12" required><br><br>
+  <label for="skill">Choose your skill level:</label>
+  <select name="skill" id="skill">
+    <option value="beginner">Beginner</option>
+    <option value="intermediate">Intermediate</option>
+    <option value="advanced">Advanced</option>
+  </select>
+
+  <input type="submit" id="signid" value="Sign me up!">
+</form>
+<section id="ThanksDialogWrapper" class="wrap" >
+    <div id="ThanksDialog" class="wrapcenter">
+
+    </div>
+</section> 
+<footer>
+    &copy;2021 - Coding Club
+</footer>
+<script>
+    function logSubmit(event) {
+        event.preventDefault();
+        ThankDialog.innerHTML = "name:"+form.fname.value+",email:"+form.mailid.value;
+    }   
+
+    const form = document.getElementById('membership');
+    const ThankDailog = document.getElementById('ThankDialog');
+    form.addEventListener('submit', logSubmit);
+</script>
+<script>
+    let signupv = document.getElementById("signid")
+    signupv.addEventListener('click', signupfunc);
+    let section = document.getElementById("ThanksDialog")
+    let secWrap = document.getElementById("ThanksDialogWrapper")
+    function signupfunc()
+        {
+            
+            let fname = document.getElementById("fname")
+            let lname = document.getElementById("lname")
+            let mailid = document.getElementById("mailid")
+            let skill = document.getElementById("skill")
+            
+            
+
+            let p = document.createElement('p');
+                p.innerHTML = '<h1><b>Thank you for signing up</b></h1>' + 'Your Name' + ':' +
+                fname.value + ' ' + lname.value + ',' +  'Email' + ':'
+                + mailid.value + ',' + 'Skill Level'+
+                ':' + skill.value + '.' +'<button type="button" id=closeid>Close</button>';
+            
+
+            section.appendChild(p);
+            secWrap.classList.add("show");
+            
+            
+            let closevar = document.getElementById("closeid");
+            closevar.addEventListener('click', clearfunc);
+        }
+
+        function clearfunc()
+        {
+            secWrap.classList.remove("show");
+            section.innerHTML = "";
+        }
+</script>
+</body>
+</html>

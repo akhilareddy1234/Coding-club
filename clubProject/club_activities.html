@@ -5,6 +5,7 @@
         <title>Club Activities</title>
         <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="../club.css" />
+        <script src="../eventData.js"></script>
     </head>
     <body>
         <nav>
@@ -12,6 +13,7 @@
                 <li><a href="./index.html">Home</a></li>
                 <li><a href="./login.html">Login</a></li>
                 <li class="active"><a href="./club_activities.html">Activities</a></li>
+                <li><a href="./application_page.html">Membership</a></li>
             </ul>
         </nav>
         <header>
@@ -29,39 +31,26 @@
                 <li>Workshops</li>
             </ul>
             <h2>Activities Schedule</h2>
-        <table>
+        <table id="activity_table">
           <thead>
             <tr>
               <th>Name</th>
               <th>Date</th>
-              <th>Description</th>
+              
             </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Workshop </td>
-              <td>9/9/21</td>
-              <td>This workshop is for beginner level programmers.</td>
-            </tr>
-
-            <tr>
-              <td>Group project session</td>
-              <td>9/10/21</td>
-              <td>Groups that are randomly formed work on a project assigned together.</td>
-            </tr>
-
-            <tr>
-              <td>Hacakthon</td>
-              <td>9/11/21</td>
-              <td>This hackathon is for individuals.</td>
-            </tr>
-
-            <tr></tr>
-          </tbody>
-          </table>
+          </thead>          
+        </table>
         </main>
         <footer>
             &copy;2021 - Coding Club
         </footer>
+        <script>
+            let table = document.getElementById('activity_table');
+            events.forEach(function(a) {
+            let tr = document.createElement('tr');
+            tr.innerHTML = '<td>' + a.name + '</td>' +'<td>' + a.dates + '</td>';
+            table.appendChild(tr);
+        });
+        </script>
     </body>
 </html>
