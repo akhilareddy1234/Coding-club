@@ -48,15 +48,15 @@
     }   
 
     const form = document.getElementById('membership');
-    const ThankDailog = document.getElementById('ThankDialog');
+    const ThankDialog = document.getElementById('ThankDialog');
     form.addEventListener('submit', logSubmit);
 </script>
 <script>
     let signupv = document.getElementById("signid")
-    signupv.addEventListener('click', signupfunc);
+    signupv.addEventListener('click', signupfunction);
     let section = document.getElementById("ThanksDialog")
     let secWrap = document.getElementById("ThanksDialogWrapper")
-    function signupfunc()
+    function signupfunction()
         {
             
             let fname = document.getElementById("fname")
@@ -77,11 +77,11 @@
             secWrap.classList.add("show");
             
             
-            let closevar = document.getElementById("closeid");
-            closevar.addEventListener('click', clearfunc);
+            let closev = document.getElementById("closeid");
+            closev.addEventListener('click', clearfunction);
         }
 
-        function clearfunc()
+        function clearfunction()
         {
             secWrap.classList.remove("show");
             section.innerHTML = "";

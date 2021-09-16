@@ -99,7 +99,7 @@ label {
     }
 
 .wrap{
-    background-color: rgba(255, 0, 0, 0.3);
+    background-color: rgba(107, 13, 13, 0.3);
     z-index: 1;
     top: 0;
     position: fixed;
@@ -109,10 +109,10 @@ label {
 }
 
 .wrapcenter{
-        background-color: aqua;
+        background-color: rgb(217, 255, 0);
         margin: auto;
         position: relative;
         max-width: 500px;
-        padding: 15px;
-        margin-top: 200px;
+        padding: 14px;
+        margin-top: 300px;
 }

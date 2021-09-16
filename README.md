@@ -145,10 +145,10 @@ events = [{"name": "Workshop",
 
 <script>
     let signupv = document.getElementById("signid")
-    signupv.addEventListener('click', signupfunc);
+    signupv.addEventListener('click', signupfunction);
     let section = document.getElementById("ThanksDialog")
     let secWrap = document.getElementById("ThanksDialogWrapper")
-    function signupfunc()
+    function signupfunction()
         {
             
             let fname = document.getElementById("fname")
@@ -169,11 +169,11 @@ events = [{"name": "Workshop",
             secWrap.classList.add("show");
             
             
-            let closevar = document.getElementById("closeid");
-            closevar.addEventListener('click', clearfunc);
+            let closev = document.getElementById("closeid");
+            closev.addEventListener('click', clearfunction);
         }
 
-        function clearfunc()
+        function clearfunction()
         {
             secWrap.classList.remove("show");
             section.innerHTML = "";
@@ -185,7 +185,7 @@ events = [{"name": "Workshop",
 ### (c)
 ```css
 .wrap{
-    background-color: rgba(255, 0, 0, 0.3);
+    background-color: rgba(107, 13, 13, 0.3);
     z-index: 1;
     top: 0;
     position: fixed;
@@ -195,12 +195,12 @@ events = [{"name": "Workshop",
 }
 
 .wrapcenter{
-        background-color: aqua;
+        background-color: rgb(217, 255, 0);
         margin: auto;
         position: relative;
         max-width: 500px;
-        padding: 15px;
-        margin-top: 200px;
+        padding: 14px;
+        margin-top: 300px;
 }
 ```
 
@@ -217,10 +217,10 @@ events = [{"name": "Workshop",
 </script>
 <script>
     let signupv = document.getElementById("signid")
-    signupv.addEventListener('click', signupfunc);
+    signupv.addEventListener('click', signupfunction);
     let section = document.getElementById("ThanksDialog")
     let secWrap = document.getElementById("ThanksDialogWrapper")
-    function signupfunc()
+    function signupfunction()
         {
             
             let fname = document.getElementById("fname")
@@ -241,11 +241,11 @@ events = [{"name": "Workshop",
             secWrap.classList.add("show");
             
             
-            let closevar = document.getElementById("closeid");
-            closevar.addEventListener('click', clearfunc);
+            let closev = document.getElementById("closeid");
+            closev.addEventListener('click', clearfunction);
         }
 
-        function clearfunc()
+        function clearfunction()
         {
             secWrap.classList.remove("show");
             section.innerHTML = "";
