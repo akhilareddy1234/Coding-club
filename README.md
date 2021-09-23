@@ -32,6 +32,8 @@ nav {
 ## (2)
 
 ### (a)
+pixel is used to consistently place a given number of characters on a line of text. 
+
 ```css
 main{
   max-width : 1000px;
