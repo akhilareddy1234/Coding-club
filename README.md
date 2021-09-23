@@ -62,6 +62,7 @@ main{
 ## (3)
 
 ### (a)
+Version Number : v14.17.6
 ![repo directory](images/image5_3a.png)
 
 ### (b)
@@ -74,7 +75,9 @@ var to_string = file_buffer.toString();
 var split_lines = to_string.split("\n");
 console.log(split_lines.length-1);
 ```
-![console program run](images/image5_3b.png)
+![console program run](images/image5_3b.PNG)
+
+Output : 84
 
 ### (c)
 javascript is more restrictive.
@@ -102,7 +105,7 @@ clubEvents.forEach(function(event) { //Look at data
 });
 
 ```
-![data dump](images/image5_3d.png)
+![data dump](images/image5_3d.PNG)
 
 ## (4)
 
@@ -116,14 +119,14 @@ we can create package.json using the command : npm init
 
 ### (d)
 
-###(e)
+### (e)
 ![console running Parcel.js](images/image5_4d1.png)
 ![Browser view](images/image5_4d2.png)
 
 ## (5)
 
 ### (a)
-![react with imported data check](images/image5_5a.png)
+![react with imported data check](images/image5_5a.PNG)
 
 ### (b)
 ![react with imported data check](images/image5_5b.png)
