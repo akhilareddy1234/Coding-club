@@ -55,6 +55,10 @@ main{
 ```
 ![form layout with grid](images/image5_2b.png)
 
+### (c)
+
+[link to updated website](http://csweb01.csueastbay.edu/~cl2103/clubProjectHW5/clubProject/)
+
 ## (3)
 
 ### (a)
