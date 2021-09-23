@@ -13,31 +13,36 @@
         </ul>
     </nav>
     
-<h2>Apply Now</h2>
 
+<main>
+    <h2>Apply Now</h2>
+    
 <form id="membership">
-  <label for="fname">First name:</label><br>
-  <input type="text" id="fname" name="fname" required><br>
-  <label for="lname">Last name:</label><br>
-  <input type="text" id="lname" name="lname" required><br><br>
-  <label for="mailid">Email id:</label><br>
-  <input type="email" id="mailid" name="mailid" required><br><br>
-  <label for="pswrd">Password</label><br>
-  <input type="password" id="pswrd" name="pswrd" minlength="8" maxlength="12" required><br><br>
+<div class = "container">
+  <label for="fname">First name:</label>
+  <input type="text" id="fname" name="fname" required>
+  <label for="lname">Last name:</label>
+  <input type="text" id="lname" name="lname" required>
+  <label for="mailid">Email id:</label>
+  <input type="email" id="mailid" name="mailid" required>
+  <label for="pswrd">Password</label>
+  <input type="password" id="pswrd" name="pswrd" minlength="8" maxlength="12" required>
   <label for="skill">Choose your skill level:</label>
-  <select name="skill" id="skill">
+  <select name="skill" id="skill" style="width:500px;">
     <option value="beginner">Beginner</option>
     <option value="intermediate">Intermediate</option>
     <option value="advanced">Advanced</option>
   </select>
 
   <input type="submit" id="signid" value="Sign me up!">
+  </div>
 </form>
 <section id="ThanksDialogWrapper" class="wrap" >
     <div id="ThanksDialog" class="wrapcenter">
 
     </div>
 </section> 
+</main>
 <footer>
     &copy;2021 - Coding Club
 </footer>

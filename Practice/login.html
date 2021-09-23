@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <title>Login Page</title>
+      
+        <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="../club.css" />
+        
+  </head>
+  <body>
+    <nav>
+        <ul>
+            <li><a href="./index.html">Home</a></li>
+            <li class="active"><a href="./login.html">Login</a></li>
+            <li><a href="./club_activities.html">Activities</a></li>
+            <li><a href="./application_page.html">Membership</a></li>
+        </ul>
+    </nav>
+    <header>
+        <h1>Login Page</h1>
+    </header>
+    <main>
+        <form action="" method="get" class="form-example">
+            <div class="email_id">
+              <label>Enter your email: </label>
+              <input type="email" name="email" id="email" required>
+            </div>
+            <br> 
+            <div class="password">
+                <label>Enter your password: </label>
+                <input type="password" name="password" id="password" required>
+            </div>
+            <br> 
+            <button class="login" type="button">Login</button>
+        </form>
+        <section style="border:rgb(20, 1, 1); border-width:8px; border-style:dashed; background-color: rgb(11, 180, 144);"> 
+            <div class="center">
+              <h1><b>Doodle!!</b></h1>
+            </div>
+            <input type="button" value="Add" id="add">
+            <input type="button" value="clear" id="clear">
+            <br>
+            <section style="border:rgb(14, 132, 165); border-width:2px; border-style:inset; height: 12cm; background-color: rgb(255, 255, 255);">
+              <svg id=svid width=1200 height=500 ></svg>
+            <br/>
+            </section>
+        </section>
+    </main>
+</body>
+    <footer>
+        &copy;2021 - Coding Club
+    </footer>
+    <script>
+        var mySVG = document.getElementById("svid");
+        var addi = document.getElementById("add");
+        var maxSize = 50,
+        maxX = 1100,
+        maxY = 400;
+        addi.addEventListener("click",randomEllipse)
+        function randomEllipse() {
+            let x = Math.random()*(maxX - maxSize);
+            let y = Math.random()*(maxY - maxSize);
+  
+            let width = Math.random()*maxSize;
+            let height= Math.random()*maxSize;
+            let ellipse = document.createElementNS("http://www.w3.org/2000/svg", "ellipse");
+            ellipse.setAttribute("cx", x);
+            ellipse.setAttribute("cy", y);
+            ellipse.setAttribute("rx" , width);
+            ellipse.setAttribute("ry",height);
+
+        let colorStr = `rgb(${255*Math.random()}, ${255*Math.random()}, ${255*Math.random()})`;
+        ellipse.setAttribute("fill", colorStr);
+        ellipse.setAttribute("fill-opacity", 0.7);
+        mySVG.appendChild(ellipse);
+        }
+        let clear = document.getElementById("clear")
+        clear.addEventListener('click', clearall);
+        function clearall(){
+            let svg = document.getElementById('svid');
+            svg.innerHTML="";
+        }
+    </script>
+</html>
+          
