@@ -5,6 +5,7 @@ npm-debug.log*
 
 # Bundler related directories
 .cache
+.parcel-cache
 dist
 
 # Dependency directories
