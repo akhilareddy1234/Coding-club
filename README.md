@@ -62,6 +62,29 @@ filename : membership.js
 
 ### (b)
 ![App component with state](images/image6_3c.png)
+```javascript
+render() {
+        let content ;
+        // statements/logic to set the content variable based on state
+        if(this.state.show=="home")
+        {
+            content = <Home />;
+        }
+        else if(this.state.show == "activities"){
+            content = <Activities events={events} />;
+        }
+        else if(this.state.show == "membership"){
+            content = <Membership />;
+        }
+        
+        return (
+            <>
+                <Menu/>
+                {content}
+            </>
+        );
+    }
+```
 
 ## (4)
 ### (a)
