@@ -18,6 +18,38 @@ filename : home.js
 ### (a)
 filename : activities.js
 ![Activity component](images/image6_2a.png)
+```javascript
+import React from "react";
+import ReactDOM from "react-dom";
+function Activities(props){
+    let tableC = props.events.map((e) =>{
+        return (<><tr>
+            <td> {e.name} </td>
+            <td> {e.dates} </td>
+            </tr></>)
+    });
+    return (<>
+    <main>
+        <table id="activity_table">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Date</th>
+        
+      </tr>
+    </thead>
+    <tbody>
+        {tableC}
+    </tbody>          
+  </table>
+  </main>
+  <footer>
+      &copy;2021 - Coding Club
+  </footer></>)
+
+}
+export default Activities;
+```
 ### (b)
 filename : login.js
 ![Login component](images/image6_2b.png)
@@ -58,3 +90,19 @@ filename : membership.js
 ![Guest menu](images/image6_4c.png)
 ![User menu](images/image6_4cii.png)
 
+```javascript
+import React from "react";
+import ReactDOM from "react-dom";
+function Menu(props){
+    return <nav>
+    <ul>
+        {props.role == "user" ? <li className={props.show == 'home' ? 'active' : ''}><a href="./index.html">Home</a></li> : ""}
+        {props.role == "guest" ? <li className={props.show == 'login' ? 'active' : ''}><a href="./login.html">Login</a></li> : ""}
+        {props.role == "user" ? <li className={props.show == 'activities' ? 'active' : ''}><a href="./club_activities.html">Activities</a></li> : "" }
+        {props.role == "guest" ? <li className={props.show == 'membership' ? 'active' : ''}><a href="./application_page.html">Membership</a></li> : ""}
+        {props.role == "user" ? <li className={props.show =='logout' ? 'active' : ''}><a>Logout</a></li> : ""}
+    </ul>
+</nav>;
+}
+export default Menu;
+```
