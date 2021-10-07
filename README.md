@@ -2,133 +2,59 @@
 
 **NetID**: cl2103
 
-# Homework 5
+# Homework 6
 ## (1)
 ### (a)
-![Horizontal menu](images/image5_1a.png)
 
 ### (b)
-```html
-<nav>
-        <ul>
-            <li class="active"><a href="./index.html">Home</a></li>
-            <li><a href="./login.html">Login</a></li>
-            <li><a href="./club_activities.html">Activities</a></li>
-            <li><a href="./application_page.html">Membership</a></li>
-        </ul>
-    </nav>
-```
-```css
-nav {
-    max-width: 100%;
-    border-style: inset;
-    position: sticky;
-    top: 0;
-}
+filename : menu.js
+![Menu component](images/image6_1b.png)
 
-```
-![Scrolling with menu at the top](images/image5_1b.png)
+### (c)
+filename : home.js
+![Menu and Home component](images/image6_1c.png)
 
 ## (2)
-
 ### (a)
-pixel is used to consistently place a given number of characters on a line of text. 
-
-```css
-main{
-  max-width : 1000px;
-  align-items: center;
-  flex-direction: column;
-  display : flex;
-  margin : 0 auto;
-}
-```
-![width limited and centered](images/image5_2a.png)
-
+filename : activities.js
+![Activity component](images/image6_2a.png)
 ### (b)
-
-```css
-.container {
-  display:grid;
-  grid-template-columns: 1fr 2fr;
-  grid-row-gap: 10px;
-  grid-column-gap:20px;
-}
-```
-![form layout with grid](images/image5_2b.png)
-
+filename : login.js
+![Login component](images/image6_2b.png)
 ### (c)
-
-[link to updated website](http://csweb01.csueastbay.edu/~cl2103/clubProjectHW5/clubProject/)
+filename : membership.js
+![Membership component](images/image6_2c.png)
 
 ## (3)
-
 ### (a)
-Version Number : v14.17.6
-![repo directory](images/image5_3a.png)
 
 ### (b)
-```javascript
-import fs from 'fs'; // File system module
-let file_name = 'index.html';
-var file_path = process.argv[2];
-var file_buffer =  fs.readFileSync(file_name);
-var to_string = file_buffer.toString();
-var split_lines = to_string.split("\n");
-console.log(split_lines.length-1);
-```
-![console program run](images/image5_3b.PNG)
-
-Output : 84
-
-### (c)
-javascript is more restrictive.
-
-```json
-[{"name": "Workshop",
-    "dates": ["Sept 16th", "Sept 26th", "Oct 6th", "Oct 16th",
-              "Oct 26th", "etc..."]},
-
-  {"name": "Group Project Session",
-   "dates": ["Sept 23rd", "Oct 1st", "Oct 14th",
-             "Oct 27nd"]},
-  {"name": "Hackathon", "dates": ["Every Sunday every month"]}]
-```
-
-### (d)
-
-```javascript
-import { readFile } from 'fs/promises'; // promise based file reading 
-const clubEvents = JSON.parse(await readFile(new URL('./event_data.json',
-    import.meta.url))); // URL for relative file location, regular JSON parsing
-
-clubEvents.forEach(function(event) { //Look at data
-    console.log(event);
-});
-
-```
-![data dump](images/image5_3d.PNG)
+![App component with state](images/image6_3c.png)
 
 ## (4)
-
 ### (a)
-we can create package.json using the command : npm init
+
+1. Guest
+ * Home
+ * Activities
+ * Login
+ * Membership
+
+2. User
+ * Home
+ * Activities
+ * Logout
+
+3. Admin
+ * Home
+ * Activities
+ * Logout
 
 ### (b)
-![contents of package.json](images/image5_4b.png)
+![User menu](images/image6_4bi.png)
+![Guest menu](images/image6_4bii.png)
 
 ### (c)
+![Guest menu](images/image6_4c.png)
+![User menu](images/image6_4cii.png)
 
-### (d)
-
-### (e)
-![console running Parcel.js](images/image5_4d1.png)
-![Browser view](images/image5_4d2.png)
-
-## (5)
-
-### (a)
-![react with imported data check](images/image5_5a.PNG)
-
-### (b)
-![react with imported data check](images/image5_5b.png)
