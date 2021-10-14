@@ -192,8 +192,8 @@ addChoice(event)
 ## (4)
 
 ### (a)
-![Prior to activity table](image7_3c.png)
-![after delete](image7_4a.png)
+![Prior to activity table](images/image7_3c.png)
+![after delete](images/image7_4a.png)
 
 ### (b)
 ```jsx
