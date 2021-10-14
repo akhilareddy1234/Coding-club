@@ -6,6 +6,7 @@ import Home from "./home";
 import Login from "./login";
 import Membership from "./membership";
 import Activities from "./activities";
+import AdminActivity from "./adminActivity";
 
 
 class App extends React.Component {
@@ -15,30 +16,41 @@ class App extends React.Component {
         // *role* is for RBAC == "role based access control"
         // we have "guest", "user", and "admin"
         //
+        this.menuhandle = this.menuhandle.bind(this);
         this.state = { role: "user", show: "home" }; 
     }
 
+    
+    menuhandle(menuitem,event)
+    {
+        this.setState({show : menuitem})
+    }
+
+
 
     render() {
-        let content ;
-        // statements/logic to set the content variable based on state
-        if(this.state.show=="home")
-        {
-            content = <Home />;
+        let content = <Home />;
+        if (this.state.show == "home") {
+            content = <><Home /></>;
+
         }
-        else if(this.state.show=="login"){
-            content=<Login />;
+        else if (this.state.show == "login") {
+            content = <><Login /></>;
         }
-        else if(this.state.show == "activities"){
-            content = <Activities events={events} />;
+        else if (this.state.show == "membership") {
+            content = <><Membership /></>;
         }
-        else if(this.state.show == "membership"){
-            content = <Membership />;
+        else if (this.state.show == "activities") {
+            content = <><Activities events={events} /></>;
+        }
+        else if(this.state.show == "adminactivity"){
+            content = <><AdminActivity /></>;
         }
         
+
         return (
             <>
-                <Menu role={"user"} show={this.state.show} />
+                <Menu menuhandle= {this.menuhandle.bind(this)} role={this.state.role} show={this.state.show} />
                 {content}
             </>
         );

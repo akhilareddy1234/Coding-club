@@ -138,3 +138,32 @@ label {
   grid-row-gap: 10px;
   grid-column-gap:20px;
 }
+
+.ThanksDialog{
+  background-color: green;
+  width: 50%;
+  border-color: blue;
+  border-width: 1em;
+}
+.wrap{
+  background-color: rgba(255, 0, 0, 0.3);
+  z-index: 1;
+  top: 0;
+  left: 0;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  display: none;
+}
+
+.wrapcenter{
+      background-color: purple;
+      border-color: black;
+      border-radius: 1cm;
+      border-width: 1cm;
+      margin: auto;
+      position: relative;
+      max-width: 500px;
+      padding: 15px;
+      margin-top: 200px;
+}
