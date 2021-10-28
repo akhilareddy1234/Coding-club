@@ -1,18 +1,18 @@
 import fetch from 'node-fetch';
 
 let user1 = {
-    email: "gjuvvv@gmail.com",
-    password: "LkI87fKssA"
+    email: "tirrivees1820@outlook.com",
+    password: "449OqspUq"
 }
 
 let user2 = {
-    email: "altuytr1801@yahoo.com",
-    password: "thiskjaaubuiop"
+    email: "tulya1801@yahoo.com",
+    password: "thikajstfop"
 }
 
 let user3 = {
-    email: "wrongkjkh ",
-    password: "nvjtkydgsbjnotthisone"
+    email: "minligkjkh ",
+    password: "nvkamsanyfgne"
 }
 
 

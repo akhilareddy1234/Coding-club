@@ -153,3 +153,50 @@ hashedUsers=users.map((user) => { user["password"] = bcrypt.hashSync(user["passw
 ### (b)
 ![3b](images/image9_3b.PNG)
 
+## (4)
+
+### (a)
+```javascript
+let hashed_data = JSON.parse(await readFile(new URL('./clubUsers3Hash.json', import.meta.url)));
+
+app.post('/login', function(req,res){
+
+    let email=req.body.email;
+    let pswrd=req.body.password;
+    console.log(pswrd)
+    console.log(email)
+    
+    let uservalue={}
+    for(let user of hashed_data)
+    {
+        if(email == user.email)
+        {
+            
+            if(bcrypt.compareSync(pwsrd, user.password)){
+                uservalue = {}
+                uservalue.firstName = user.firstName;
+                uservalue.lastName = user.lastName;
+                uservalue.role = user.role;
+                uservalue.email = user.email;
+                uservalue.error = false
+                break
+            }
+            uservalue = {"error": true, "message": "Password is not correct"}
+            break
+        }
+        uservalue = {"error": true, "message": "User and Password both are incorrect" }
+    }
+    if(uservalue.error)
+    {
+        res.status(401);
+    }
+    else{res.status(200);}
+    console.log(uservalue)
+    res.json(uservalue)
+
+})
+
+```
+
+## (b)
+![](images/image9_4b.png)

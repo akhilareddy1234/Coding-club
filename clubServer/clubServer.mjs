@@ -1,13 +1,13 @@
 import express  from 'express';
 import { readFile }  from 'fs/promises';
-import fs from 'fs';
+import bcrypt from 'bcryptjs';
 
 
 // app.use(express.urlencoded({extended : false}));
 
-
-
 let app = express();
+app.use(express.json());
+
 const activities = JSON.parse(await readFile(new URL('../clubReact/event_data.json',
     import.meta.url)))
 const clubMembers= JSON.parse(await readFile(new URL('./clubUsers3NoPW.json',
@@ -52,22 +52,22 @@ app.delete('/activities/:index', function(req,res){
 
 } );
 
-let hasheddata = JSON.parse(await readFile(new URL('./clubUsers3Hash.json', import.meta.url)));
+let hashed_data = JSON.parse(await readFile(new URL('./clubUsers3Hash.json', import.meta.url)));
 
 app.post('/login', function(req,res){
 
     let email=req.body.email;
-    let pass=req.body.password;
-    console.log(pass)
+    let pswrd=req.body.password;
+    console.log(pswrd)
     console.log(email)
     
     let uservalue={}
-    for(let user of hasheddata)
+    for(let user of hashed_data)
     {
         if(email == user.email)
         {
             
-            if(bcrypt.compareSync(pass, user.password)){
+            if(bcrypt.compareSync(pwsrd, user.password)){
                 uservalue = {}
                 uservalue.firstName = user.firstName;
                 uservalue.lastName = user.lastName;
