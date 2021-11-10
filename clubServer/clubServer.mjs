@@ -52,22 +52,22 @@ app.delete('/activities/:index', function(req,res){
 
 } );
 
-let hashed_data = JSON.parse(await readFile(new URL('./clubUsers3Hash.json', import.meta.url)));
+let hasheddata = JSON.parse(await readFile(new URL('./clubUsers3Hash.json', import.meta.url)));
 
 app.post('/login', function(req,res){
 
     let email=req.body.email;
-    let pswrd=req.body.password;
-    console.log(pswrd)
+    let pass=req.body.password;
+    console.log(pass)
     console.log(email)
     
     let uservalue={}
-    for(let user of hashed_data)
+    for(let user of hasheddata)
     {
         if(email == user.email)
         {
             
-            if(bcrypt.compareSync(pwsrd, user.password)){
+            if(bcrypt.compareSync(pass, user.password)){
                 uservalue = {}
                 uservalue.firstName = user.firstName;
                 uservalue.lastName = user.lastName;
