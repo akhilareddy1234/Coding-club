@@ -35,14 +35,9 @@ class AdminActivity extends React.Component {
             <main>
                 <section id="AdminActivity">
                 <label>Name : </label>
-                <input type="text"
-                onInput={(event) => this.setState({ name: event.target.value })} 
-                />
+                <input type="text" onInput={(event) => this.setState({ name: event.target.value })} />
                 <label>Date : </label>
-                <input type="text"
-                // value={this.state.date}
-                onInput={(event) => this.setState({ dates: event.target.value })} 
-                />
+                <input type="text" onInput={(event) => this.setState({ dates: event.target.value })} />
                 <button onClick={this.addChoice.bind(this)}>Add</button></section>
                 <h3>Activity Schedule</h3>
                 <table>
