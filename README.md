@@ -331,38 +331,68 @@ Club Activities interface
 HTTP method: GET
 URL: HTTP GET http://localhost:2020/activities
 
-success and error codes: 200 (OK), 404 (NOT FOUND), 400 (BAD REQUEST)  a sample of data to be sent and/or received: "names": "Basic Practice", who should be allowed to use this interface (guest, member, admin): member and admin
+success and error codes: 200 (OK), 404 (NOT FOUND), 400 (BAD REQUEST)
+a sample of data to be sent and/or received: "names": "Basic Practice"
+who should be allowed to use this interface (guest, member, admin): member and admin
 
 Add Club Activities interface
 HTTP method: POST 
-URL: HTTP POST http://localhost:2020/addThing  success and error codes: 200 (OK), 201 (Created), 204 (No Content) a sample of data to be sent and/or received: {"name": "Basic Warm Up", "dates" : ["10:00AM IST"]} who should be allowed to use this interface (guest, member, admin): Admin
+URL: HTTP POST http://localhost:2020/addThing  success and error codes: 200 (OK), 201 (Created), 204 (No Content) 
+a sample of data to be sent and/or received: {"name": "Basic Warm Up", "dates" : ["10:00AM IST"]} 
+who should be allowed to use this interface (guest, member, admin): Admin
 
 Delete Club Activities interface
 HTTP method: DELETE
 URL: HTTP DELETE http://localhost:2020/removeThing
-success and error codes: 405 (Method not allowed), 200 (OK), 404 (Not Found) a sample of data to be sent and/or received: {"name": "Basic Warm Up", "dates" : ["10:00AM IST"] , who should be allowed to use this interface (guest, member, admin): Admin
+success and error codes: 405 (Method not allowed), 200 (OK), 404 (Not Found)
+a sample of data to be sent and/or received: {"name": "Basic Warm Up", "dates" : ["10:00AM IST"] 
+who should be allowed to use this interface (guest, member, admin): Admin
 ```
 ### (b) Specify Member Interfaces
 ```
 all club members
 HTTP method: GET
 URL: HTTP GET http://localhost:2020/users 
-success and error codes:200 (OK), 404 (NOT FOUND), 400 (BAD REQUEST) a sample of data to be sent and/or received: list of all members who should be allowed to use this interface: Admin
+success and error codes:200 (OK), 404 (NOT FOUND), 400 (BAD REQUEST) 
+a sample of data to be sent and/or received: list of all members 
+who should be allowed to use this interface: Admin
 
 Adding a new club member
 HTTP method: POST
-URL: HTTP POST http://localhost:2020/addUser success and error codes: 200 (OK), 201 (Created), 204 (No Content) a sample of data to be sent and/or received: Mr. Sunny who should be allowed to use this interface: Admin
+URL: HTTP POST http://localhost:2020/addUser 
+success and error codes: 200 (OK), 201 (Created), 204 (No Content) 
+a sample of data to be sent and/or received: Mr. Sunny 
+who should be allowed to use this interface: Admin
 
-Updating a club member HTTP method: PUT URL: HTTP PUT http://localhost:2020/users/123 success and error codes: 405 (Method not allowed), 200 (OK) or 204 (No Content), 404 (Not Found) a sample of data to be sent and/or received: Mr Honey to Mr. Twinkle who should be allowed to use this interface: member, Admin
+Updating a club member HTTP method: PUT URL: HTTP PUT http://localhost:2020/users/123 
+success and error codes: 405 (Method not allowed), 200 (OK) or 204 (No Content), 404 (Not Found) 
+a sample of data to be sent and/or received: Mr Honey to Mr. Twinkle 
+who should be allowed to use this interface: member, Admin
 
-Deleting a club member HTTP method: DELETE URL: HTTP DELETE http://127.0.0.1:7797/deleteUser success and error codes: 405 (Method not allowed), 200 (OK), 404 (Not Found) a sample of data to be sent and/or received: Delete Mr. Dimple who should be allowed to use this interface: member, Admin
+Deleting a club member HTTP method: DELETE URL: HTTP DELETE http://127.0.0.1:7797/deleteUser 
+success and error codes: 405 (Method not allowed), 200 (OK), 404 (Not Found) 
+a sample of data to be sent and/or received: Delete Mr. Dimple 
+who should be allowed to use this interface: member, Admin
 ```
 
 ### (c) Specify Applicant Interfaces
 ```
-Club applicants HTTP method: GET URL: HTTP GET http://localhost:2020/applicants success and error codes: 200 (OK), 404 (NOT FOUND), 400 (BAD REQUEST) a sample of data to be sent and/or received: list of all applicants who should be allowed to use this interface: Admin
+Club applicants HTTP method: GET 
+URL: HTTP GET http://localhost:2020/applicants
+success and error codes: 200 (OK), 404 (NOT FOUND), 400 (BAD REQUEST) 
+a sample of data to be sent and/or received: list of all applicants
+who should be allowed to use this interface: Admin
 
-Adding new club applicant HTTP method: POST URL: HTTP POST http://localhost:2020/addApplicant success and error codes: 200 (OK), 201 (Created), 204 (No Content) a sample of data to be sent and/or received: Mr. Motu who should be allowed to use this interface: Admin
+Adding new club applicant
+HTTP method: POST 
+URL: HTTP POST http://localhost:2020/addApplicant 
+success and error codes: 200 (OK), 201 (Created), 204 (No Content) 
+a sample of data to be sent and/or received: Mr. Motu 
+who should be allowed to use this interface: Admin
 
-deleting club applicant HTTP method: DELETE URL: HTTP DELETE http://localhost:2020/deleteApplicant success and error codes: 405 (Method not allowed), 200 (OK), 404 (Not Found) a sample of data to be sent and/or received: delete Mr. Zoe who should be allowed to use this interface: Admin
+deleting club applicant 
+HTTP method: DELETE URL: HTTP DELETE http://localhost:2020/deleteApplicant 
+success and error codes: 405 (Method not allowed), 200 (OK), 404 (Not Found) 
+a sample of data to be sent and/or received: delete Mr. Zoe 
+who should be allowed to use this interface: Admin
 ```
