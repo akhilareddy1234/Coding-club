@@ -68,42 +68,47 @@ app.use(handleErrors);
 ```
 
 ### (b)
-```javascript
-  [{"name": "Workshop",
-    "dates": ["Sept 16th", "Sept 26th", "Oct 6th", "Oct 16th",
-              "Oct 26th", "etc..."]},
+- Valid JSON Object
 
-  {"name": "Group Project Session",
-   "dates": ["Sept 23rd", "Oct 1st", "Oct 14th",
-             "Oct 27nd"]},
-  {"name": "Hackathon", "dates": ["Every Sunday every month"]}]
-  ```
+json
+{
+  "name": "Akhila",
+  "email": "bukkasamudramakhila@gmail.com",
+  "password": "leavemealone123",
+  "membershipType": "premium",
+  "comments":"No comments",
+}
 
-  ```javascript
-  {
-    "$schema": "http://json-schema.org/draft-07/schema#",
-    "$id": "http://locolhost:2020/activities",
-    "title": "Activity Schema",
-    "description": "A Schema that requires a JSON object",
-    "type": "array",
-    "items":
-    {
-        "type": "object",
-        "properties":
-        {
-            "name": {
-            "description": "name",
-            "type": "string"
-          
-            },
-            "dates": {
-            "description": "date",
-            "type": "array"
-            }
-        },
-        "required": ["name", "dates"],
-        "additionalProperties": false
+
+- JSON Schema
+
+```json
+{
+  "$id": "http://json-schema.org/draft-04/schema#",
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string"
+    },
+    "email": {
+      "type": "string"
+    },
+    "password": {
+      "type": "string"
+    },
+    "membershipType": {
+      "type": "string"
+    },
+    "comments": {
+      "type": "string"
     }
-    
-  }
-```
+  },
+  "required": [
+    "name",
+    "email",
+    "password",
+    "membershipType",
+    "comments"
+  ]
+}
