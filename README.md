@@ -112,3 +112,21 @@ app.use(handleErrors);
     "comments"
   ]
 }
+```
+### (c)
+
+```javascript
+app.post("/applicants", function (req, res) {
+  let applicantValidate = ajv.compile(applicantSchema);
+  const valid = applicantValidate(req.body);
+  if (!valid) {
+    res.status(401);
+    var returnData = { error: true, message: valid.errors };
+    res.send(returnData);
+  } else {
+    var data = [];
+    data.push(req.body);
+    res.send(data);
+  }
+})
+```
