@@ -132,6 +132,8 @@ app.post("/applicants", function (req, res) {
 ```
 
 ## (4)
+### (a)
+![](images/image11_4a.png)
 
 ### (b)
 ![](images/image11_4b.jpeg)
