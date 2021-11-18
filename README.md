@@ -130,3 +130,8 @@ app.post("/applicants", function (req, res) {
   }
 })
 ```
+
+## (4)
+
+### (b)
+![](images/image11_4b.jpeg)
