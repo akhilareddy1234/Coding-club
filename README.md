@@ -70,7 +70,7 @@ app.use(handleErrors);
 ### (b)
 - Valid JSON Object
 
-json
+```json
 {
   "name": "Akhila",
   "email": "bukkasamudramakhila@gmail.com",
@@ -78,7 +78,7 @@ json
   "membershipType": "premium",
   "comments":"No comments",
 }
-
+```
 
 - JSON Schema
 
