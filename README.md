@@ -2,138 +2,117 @@
 
 **NetID**: cl2103
 
-# Homework 11
+# Homework 12
 ## (1)
 ### (a)
-![](images/image11_1a.png)
+```javascript
+import DataStore from "nedb-promises";
+
+import { readFile } from "fs/promises";
+
+
+
+const activitydb = DataStore.create("./activityDB");
+
+const memberdb = DataStore.create("./memberDB");
+
+const activitiesFile = JSON.parse(
+
+    await readFile(new URL("./activity.json", import.meta.url))
+
+  );
+
+const memberFile = JSON.parse(
+
+    await readFile(new URL("./clubUsers3Hash.json", import.meta.url))
+
+  );
+
+
+
+async function clearInsert(){    
+
+    await activitydb.remove({}, { multi: true });
+
+    await memberdb.remove({}, { multi: true });  
+
+    await activitydb.insert(activitiesFile)
+
+    await memberdb.insert(memberFile)
+
+}  
+
+
+
+clearInsert()
+```
 
 ### (b)
-![](images/image11_1b.png)
+```javascript
+app.get('/members', adminMiddleware, async function (req, res) {
+    let firstAndLast = await membersDB.find({},{firstName: 1, lastName:1});
+    res.json(firstAndLast);
+});
+```
+
+### (c)
+```javascript
+// display the activities on server
+app.get('/activities',jsonParsor, async function (req, res) {
+    let activities = await activitiesDB.find({});
+    res.json(activities);
+});
+
+// post the updated activities after adding a new activity
+app.post('/activities', userMiddleware, adminMiddleware, jsonParsor, async function (req, res) {
+    console.log('adding an activity received:  ${JSON.stringyfy(req.body)}');
+    let activity = req.body;
+
+    let valid = activityValidate(activitySchema, activity);
+    //hw12 insert activity into database
+    if(!valid){
+        console.log(activityValidate.errors);
+        res.status(400).json({error: "bad activity"});
+        return;
+    } 
+    await activitiesDB.insert(activity);
+    let activities = await activitiesDB.find({});
+    res.json(activities);   
+}, jsonErrors);
+
+
+app.delete("/activities/:id", adminMiddleware,jsonParsor, async function (req, res) {
+    console.log("req params", req.params.id)
+    // let index = parseInt(req.params.id);
+    // activities.splice(index,1);
+    //hw12
+    await activitiesDB.remove({_id: req.params.id});
+    let activities = await activitiesDB.find({});
+    res.json(activities);
+});
+```
 
 ## (2)
 
-```javascript
-  [{"name": "Workshop",
-    "dates": ["Sept 16th", "Sept 26th", "Oct 6th", "Oct 16th",
-              "Oct 26th", "etc..."]},
-
-  {"name": "Group Project Session",
-   "dates": ["Sept 23rd", "Oct 1st", "Oct 14th",
-             "Oct 27nd"]},
-  {"name": "Hackathon", "dates": ["Every Sunday every month"]}]
-  ```
-
-  ```javascript
-  {
-    "$schema": "http://json-schema.org/draft-07/schema#",
-    "$id": "http://locolhost:2020/activities",
-    "title": "Activity Schema",
-    "description": "A Schema that requires a JSON object",
-    "type": "array",
-    "items":
-    {
-        "type": "object",
-        "properties":
-        {
-            "name": {
-            "description": "name",
-            "type": "string"
-          
-            },
-            "dates": {
-            "description": "date",
-            "type": "array"
-            }
-        },
-        "required": ["name", "dates"],
-        "additionalProperties": false
-    }
-    
-  }
-```
+### (a)
+No modifications
+![](images/image11_1a.png)
+### (b)
+No modifications
+![](images/image11_4b.jpeg)
 
 ## (3)
 ### (a)
-```javascript
-const handleErrors = (err, req, res, next) => {
-  console.log("Harita");
-  console.log(err);
-  if (!err.statusCode) err.statusCode = 500;
-  return res.status(err.statusCode).json({
-    message: err.message,
-  });
-};
+1. clubReact development Parcel bundler is running on `http://localhost:1234` with host - `localhost` and TCP port - `1234`
 
-app.use(handleErrors);
-```
+2. clubServer development Parcel bundler is running on `http://localhost:2020` with host - `localhost` and TCP port - `2020` (This is explicitely specified).
 
 ### (b)
-- Valid JSON Object
-
-```json
-{
-  "name": "Akhila",
-  "email": "bukkasamudramakhila@gmail.com",
-  "password": "leavemealone123",
-  "membershipType": "premium",
-  "comments":"No comments",
-}
 ```
-
-- JSON Schema
-
-```json
 {
-  "$id": "http://json-schema.org/draft-04/schema#",
-  "$schema": "http://json-schema.org/draft-04/schema#",
-  "type": "object",
-  "properties": {
-    "name": {
-      "type": "string"
-    },
-    "email": {
-      "type": "string"
-    },
-    "password": {
-      "type": "string"
-    },
-    "membershipType": {
-      "type": "string"
-    },
-    "comments": {
-      "type": "string"
+    "/activities": {
+        "target": "http://127.10.41.5:2050"
     }
-  },
-  "required": [
-    "name",
-    "email",
-    "password",
-    "membershipType",
-    "comments"
-  ]
 }
 ```
-### (c)
 
-```javascript
-app.post("/applicants", function (req, res) {
-  let applicantValidate = ajv.compile(applicantSchema);
-  const valid = applicantValidate(req.body);
-  if (!valid) {
-    res.status(401);
-    var returnData = { error: true, message: valid.errors };
-    res.send(returnData);
-  } else {
-    var data = [];
-    data.push(req.body);
-    res.send(data);
-  }
-})
-```
-
-## (4)
-### (a)
-![](images/image11_4a.png)
-
-### (b)
-![](images/image11_4b.jpeg)
